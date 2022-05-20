@@ -11,7 +11,7 @@ const AnimatedIcon = Animated.createAnimatedComponent(Icon);
 
 type IonicIconProps = Omit<IconProps, 'sytle'> & {
   outline?: boolean;
-  style?: Animated.AnimatedStyleProp<TextStyle>;
+  style?: Animated.AnimateStyle<TextStyle>;
 };
 
 const IonicIcon: React.FC<IonicIconProps> = ({ name, outline, ...iconProps }) => {

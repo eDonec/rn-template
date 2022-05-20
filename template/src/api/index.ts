@@ -13,11 +13,8 @@ const api = axios.create({
 });
 
 export const resetAuthToken = async (token?: string) => {
-  if (token) {
-    api.defaults.headers.Authorization = `bearer ${token}`;
-  } else {
-    api.defaults.headers.Authorization = null;
-  }
+  if (token) api.defaults.headers.common.Authorization = `Bearer ${token}`;
+  else delete api.defaults.headers.common.Authorization;
 };
 
 api.interceptors.response.use(
@@ -32,7 +29,7 @@ api.interceptors.response.use(
     ) {
       request._retry = true;
       await refreshUserToken();
-      request.headers.Authorization = api.defaults.headers.Authorization;
+      request.headers.Authorization = api.defaults.headers.common.Authorization;
 
       return api(request);
     }

@@ -4,8 +4,10 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:datePickerDialogTheme">@style/DialogDatePicker.Theme</item>
     </style>
-    <style name="BootTheme" parent="AppTheme">
-        <item name="android:background">@drawable/bootsplash</item>
+    <style name="BootTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bootsplash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/bootsplash_logo</item>
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
     <style name="DialogDatePicker.Theme" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:fontFamily">@font/lato_bold</item>

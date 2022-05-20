@@ -49,7 +49,7 @@ React Native template with most of the essential packages installed and set up +
 - Flipper debugger setup
 - Gitlab CI/CD scripts
 
-**React Native version : 0.66.2**
+**React Native version : 0.68.2**
 
 ## Usage :
 

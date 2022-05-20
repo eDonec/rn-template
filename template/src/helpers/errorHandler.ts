@@ -4,7 +4,12 @@ import { showToast } from './showToast';
 
 export const errorHandler = (error: AxiosError | Error): void => {
   if (isAxiosError(error)) {
-    showToast(error.response?.data.message || error.response?.data, 'DANGER');
+    showToast(
+      typeof error.response?.data === 'string'
+        ? error.response.data
+        : error.response?.data.message,
+      'DANGER',
+    );
   } else {
     showToast(error.message, 'DANGER');
   }
