@@ -53,4 +53,4 @@ React Native template with most of the essential packages installed and set up +
 
 ## Usage :
 
-`npx react-native init MyAppName --template https://github.com/eDonec/react-native-template`
+`npx react-native init MyAppName --template https://github.com/eDonec/rn-template`
