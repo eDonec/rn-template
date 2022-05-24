@@ -6,4 +6,4 @@ export type NavigatorParamList = {
 };
 
 export type NavigatorNavigationProp = AppNavigationProp<NavigatorParamList>;
-export type NavigatorRouteProp = AppRouteProp<NavigatorParamList>;
+export type NavigatorRouteProp<T extends keyof NavigatorParamList>  = AppRouteProp<NavigatorParamList, T>;

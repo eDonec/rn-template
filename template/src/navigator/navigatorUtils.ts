@@ -6,4 +6,5 @@ export type AppNavigationProp<T extends Record<string, any>> = NativeStackNaviga
   T,
   keyof T
 >;
-export type AppRouteProp<T extends Record<string, any>> = RouteProp<T, keyof T>;
+export type AppRouteProp<T extends Record<string, any>, U extends keyof T> = RouteProp<T, U>;
+
